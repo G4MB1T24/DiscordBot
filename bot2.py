@@ -132,12 +132,7 @@ async def playmusic(ctx, url: str):
     else:
         await ctx.say("Already is in voice channel!")
 
-
-# @client.command(aliases = ["disc"] )
-# async def disconnect(ctx ):
-#     voicechannel = discord.utils.get(ctx.guild.voice_channels , name="general")
-#     voice = discord.utils.get(client.voice_clients , guild = ctx.guild)
-#     await voicechannel.disconnect()
+#music function  coming soon i am still learning!
 
 
 ## Multipurpose Bot Tools ##
