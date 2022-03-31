@@ -11,11 +11,11 @@ import random
 
 
 reddit = praw.Reddit(
-    client_id="CC0Kx-h-SNIRTzgIECzi9A",
-    client_secret="Xq9SVPYEy71X9cHZ-7_HTryZFe3ueg",
-    username="Gambit2422",
-    password="Manish1@",
-    user_agent="python69",
+    client_id="Your reddit client id",
+    client_secret="Your clien secret",
+    username="Reddit username",
+    password="Reddit pass",
+    user_agent="python69 *any useragent*",
     check_for_async=False,
 )
 
@@ -79,15 +79,6 @@ async def on_message(message):
     await client.process_commands(message)
 
 
-## FunArea For only Mods/Admins ##
-@client.command(aliases=["s", "spam", "ks"])
-@commands.has_permissions(ban_members=True)
-async def bomb(ctx, amount=3):
-    lol = amount
-    for i in range(lol):
-        kevid = 284904000900431873
-        await ctx.channel.send(f"{ i+1},<@{kevid}>")
-        time.sleep(0.1)
 
 
 ## fun for everyone ##
@@ -177,7 +168,7 @@ async def ping(ctx):
 @client.command(aliases=["temp"])
 async def temprature(ctx, *, city):
 
-    API_KEY = "482cdbba0a14c814c8ad057cbdc49cb5"
+    API_KEY = "Your open weather api key *Only use openweather to use this function*"
     BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
     req_url = f"{BASE_URL}?appid={API_KEY}&q={city}"
     response = requests.get(req_url)
@@ -269,7 +260,7 @@ async def unbanmembers(ctx, *, member):
 @client.command(aliases=["m", "mute"])
 @commands.has_permissions(kick_members=True)
 async def mutemember(ctx, member: discord.Member):
-    muted_role = ctx.guild.get_role(849632316388671528)
+    muted_role = ctx.guild.get_role("A role Muted role id in INT format")
     await member.add_roles(muted_role)
     await ctx.channel.send(f"{member.mention} , has been muted")
 
@@ -283,4 +274,4 @@ async def unmutemember(ctx, member: discord.Member):
 
 
 # Token
-client.run("OTM0Mzg5MTEwMDI0NTgxMTkw.YevXqw.CW4V83aZzTN6JxYfYokzJuGVlBI")
+client.run("Your Bot Token Here")
