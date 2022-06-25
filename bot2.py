@@ -68,7 +68,7 @@ async def botprefix(ctx):
     await ctx.channel.send(f"Prefix {pre}")
 
 
-sus_words = ["nigga", "faggot"]
+sus_words = ["Enter your words here"]
 
 
 @client.event
